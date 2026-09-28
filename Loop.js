@@ -1,77 +1,48 @@
-// sum of the number.
-let n = 153;
-let sum = 0;
-for( let digit of String(n)){
-    sum = sum + Number(digit)
-}
-console.log("EX - Number",n,"sum of its digit:",sum);
+// find the maxmimum number 
 
+ const MaxmiumNumber=[1,2,3,4,5,6,7,8,9,100];
+ 
 
-// print the table where n is variable
-let p = 4;
-console.log("Table of",p);
-for ( let m = 1; m <= 5; m++){
-console.log(p + "x" + m + "=" +(p*m));
-}
+let findMaxium = () =>{
+    let max = MaxmiumNumber[0];
+    for (i=0; i<MaxmiumNumber.length; i++){
+        if (MaxmiumNumber[i]>max){
 
-//prime number
-
-let primeNumber = n;
-let isPrime =true;
-
-if (primeNumber <= 1){
-    isPrime = false;
-}else{
-    for (let i = 2; i < primeNumber; i++){
-        if (primeNumber % i === 0){
-            isPrime = false;
-            break;
+           max = MaxmiumNumber[i]; 
         }
     }
-}
-if (isPrime){
-    console.log(n,"prime number");
-}else{
-    console.log(n,"not a prime number")
-}
+    console.log("the max number in this array are:",max);
+};
+findMaxium();
 
-//print all its factor
+// calculate the sum of the elements in the array.
 
-let factorNumber = n;
-for (let i = 1; i<=factorNumber; i++){
-    if (factorNumber % i === 0){
+const arrSum = [1,2,3,4,2,1,3,3,23,0];
+ let sum =0;
 
-        console.log("factors of factorNumber are",i);
+ let Sumof = ()=>{
+    for (i=0;i<arrSum.length;i++){
+        sum += arrSum[i]
+    }
+    console.log("the sum of the array:",sum);
+ }
+ Sumof();
+
+ //count the odd number 
+
+  
+ let Odd =[1,2,3,4,5];
+ let count =0;
+   let oddOf = ()=>{
+    for(let i=0;i<Odd.length;i++){
+      
+    if (Odd[i] %2 !== 0 ){
+          //console.log("odd number are:",Odd[i]);
+          count++;
     }
     
+  }
 }
-
-//sum of all the numbers
-
-let s = 112;
- let sum1 = 0;
- for (let i = 1; i <=s; i++){
-    sum1 = sum1 + i; 
- }
- console.log("sum of the numbers are:",sum1);
-
- 
-//armstrong
-
-let armstrongNumber = n;
-let temp = armstrongNumber;
-let armstrongSum = 0;
-
-while (temp > 0) {
-    let digit = temp % 10;
-    armstrongSum = armstrongSum + (digit * digit * digit);
-    temp = Math.floor(temp / 10);
-}
-if (armstrongSum === armstrongNumber) {
-    console.log(armstrongNumber, "is an Armstrong Number");
-} else {
-    console.log(armstrongNumber, "is NOT an Armstrong Number");
-}
-
-
+oddOf();
+console.log("count of odd number are :",count);
 
