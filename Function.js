@@ -1,48 +1,53 @@
 // find the maxmimum number 
 
- const MaxmiumNumber=[1,2,3,4,5,6,7,8,9,100];
- 
+const arr=[4,8,2,11,6,7];
 
-let findMaxium = () =>{
-    let max = MaxmiumNumber[0];
-    for (i=0; i<MaxmiumNumber.length; i++){
-        if (MaxmiumNumber[i]>max){
 
-           max = MaxmiumNumber[i]; 
+function findMaximum(arr) {
+
+    let max = arr[0];
+
+    for (let i = 0; i < arr.length; i++) {
+
+        if (arr[i] > max) {
+            max = arr[i];
         }
     }
-    console.log("the max number in this array are:",max);
-};
-findMaxium();
+
+    return max;
+}
+
+console.log("Maximum number are:", findMaximum(arr));
 
 // calculate the sum of the elements in the array.
 
-const arrSum = [1,2,3,4,2,1,3,3,23,0];
- let sum =0;
+const sumOf = function(arr) {
 
- let Sumof = ()=>{
-    for (i=0;i<arrSum.length;i++){
-        sum += arrSum[i]
+    let sum = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
     }
-    console.log("the sum of the array:",sum);
- }
- Sumof();
+
+    return sum;
+};
+
+console.log("Sumof:", sumOf(arr));
 
  //count the odd number 
 
-  
- let Odd =[1,2,3,4,5];
- let count =0;
-   let oddOf = ()=>{
-    for(let i=0;i<Odd.length;i++){
-      
-    if (Odd[i] %2 !== 0 ){
-          //console.log("odd number are:",Odd[i]);
-          count++;
-    }
-    
-  }
-}
-oddOf();
-console.log("count of odd number are :",count);
+ const countOdd = (arr) => {
 
+    let count = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+
+        if (arr[i] % 2 !== 0) {
+            count++;
+        }
+    }
+
+    return count;
+};
+
+console.log("odd numbers in the arr:",countOdd(arr));
